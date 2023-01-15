@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Weird Dot",
+  "description": "Make a weird dot on ur screen",
+  "version": "0.1",
+  "icons": {
+    "16": "/images/icon-16.png",
+    "48": "/images/icon-48.png",
+    "128": "/images/icon-128.png"
+  },
+  "action": {
+    "default_title": "Click to show an alert"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["point.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
