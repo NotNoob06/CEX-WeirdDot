@@ -1,0 +1,1 @@
+document.getElementById("mouse").remove()
